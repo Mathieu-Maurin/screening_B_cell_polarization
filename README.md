@@ -12,7 +12,7 @@ Composites images must be in a format PlateName-Well_A01-Pos1
 where A01 indicates the well coordinate in the plate and Pos1 the field 1 acquired in the well
 Composites must be store in a directory to select for analysis
 
-#####################################################################################################################
+################################################################################################
 
 #######################################
 Macro_1_cell_beads_couple_extraction.ijm :
