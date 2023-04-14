@@ -12,6 +12,7 @@ Composites images must be in a format PlateName-Well_A01-Pos1
 where A01 indicates the well coordinate in the plate and Pos1 the field 1 acquired in the well
 Composites must be store in a directory to select for analysis
 
+
 ################################################################################################
 
 #######################################
@@ -27,6 +28,12 @@ Channel 4 : Fluorescent beads
 Raw image composites are in the format PlateName-Well_A01-Pos1,  
 where A01 indicates the well coordinate in the plate and Pos1 the field 1 acquired in the well
 Composites must be store in a directory to select for analysis
+
+The macro will create an analysis directory to store output where the composite directory is located
+If mydatasPathway/FolderName is your data's folder, here it creates
+mydatasPathway/FolderName_Extracted_Couple/Individual_Rois
+mydatasPathway/FolderName_Extracted_Couple/Extraction_Masks
+
 #######################################
 
 #######################################
@@ -42,6 +49,10 @@ Channel 4 : Fluorescent beads
 Raw image composites are in the format PlateName-Well_A01-Pos1,  
 where A01 indicates the well coordinates in the plate and Pos1 the field 1 acquired in the well
 Works after Macro 1
+
+If mydatasPathway/FolderName is your data's folder, here it creates
+mydatasPathway/FolderName_Extracted_Couple/Analysis
+
 #######################################
 
 #######################################
@@ -49,5 +60,16 @@ Macro_3_normalise_and_concatenate_tables.ijm :
 
 The purpose of this macro is to normalize data and concatenate tables. It works after Macro 2. 
 Output tables are in the format PlateName-Well_A01_Results. A01 indicates the well coordinate in the plate. It contains all the polarity results from all positions of a given well. The macro concatenates and normalizes data to get a single table for centrosome-polarity or lysosomes-polarity. It computes also median values for each well. Normalization is based on the median value of well B01 of each plate (non-targeting siRNA), which is normalized to 1. 
+
+If mydatasPathway/FolderName is your data's folder, here it creates
+mydatasPathway/FolderName_Extracted_Couple/Final_Tables
+
 #######################################
 
+#######################################
+Macro_4_count_cell_beads_and_couple.ijm :
+
+The purpose of this macro is to control beads cells and couple count, after Macro 3.
+Add a result table in the Final_table folder
+
+#######################################
